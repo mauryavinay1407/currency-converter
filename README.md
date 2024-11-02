@@ -16,7 +16,7 @@ A sleek and stylish currency converter built with React, using real-time currenc
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/currency-converter.git
+   git clone https://github.com/mauryavinay1407/currency-converter.git
    cd currency-converter
    ```
 2. Install dependencies:

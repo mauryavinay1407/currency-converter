@@ -24,14 +24,13 @@ function CurrencyConverter() {
   };
 
   return (
-    <div className="max-w-lg w-full bg-white/20 rounded-xl backdrop-blur-lg p-8 text-black shadow-[0_0_10px_white]">
+    <div className="max-w-lg w-full bg-white/20 rounded-xl backdrop-blur-lg p-4 sm:p-8 text-black shadow-md sm:shadow-lg transition-all">
       <form
         onSubmit={(e) => {
           e.preventDefault();
           convert();
         }}
       >
-        {/* From Amount */}
         <div className="w-full mb-4">
           <InputBox
             label="From"
@@ -43,18 +42,16 @@ function CurrencyConverter() {
           />
         </div>
 
-        {/* Swap Button */}
-        <div className="relative my-6 flex justify-center">
+        <div className="relative my-4 sm:my-6 flex justify-center">
           <button
             type="button"
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg hover:scale-105 transform transition"
+            className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md sm:shadow-lg hover:scale-105 transform transition"
             onClick={swap}
           >
             <IoSwapVerticalOutline size={24} />
           </button>
         </div>
 
-        {/* To Amount */}
         <div className="w-full mb-6">
           <InputBox
             label="To"
@@ -66,10 +63,9 @@ function CurrencyConverter() {
           />
         </div>
 
-        {/* Convert Button */}
         <button
           type="submit"
-          className="w-full py-3 text-lg font-medium bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-700 text-white rounded-lg shadow-md hover:bg-opacity-90 transform hover:scale-105 transition"
+          className="w-full py-2 sm:py-3 text-md sm:text-lg font-medium bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-700 text-white rounded-lg shadow-md sm:shadow-lg  hover:bg-opacity-90 transform hover:scale-105 transition"
         >
           Convert {from.toUpperCase()} to {to.toUpperCase()}
         </button>
